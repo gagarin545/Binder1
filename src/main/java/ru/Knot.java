@@ -32,9 +32,6 @@ public class Knot implements Component {
         print();
     }
     private void print() {
-        Iterator iterator = knots.iterator();
-        while(iterator.hasNext())
-            ((Component) iterator.next()).difference();
-
+        for (Object knot : knots) ((Component) knot).difference();
     }
 }

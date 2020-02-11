@@ -15,6 +15,5 @@ public class Binder {
         p1.getChild(3).getChild(0).add( new KnotItem(46,  "1.4.1.2"));
         p1.getChild(3).getChild(0).add( new KnotItem(80,  "1.4.1.3"));
         p1.difference();
-      //  p1.print();
     }
 }
