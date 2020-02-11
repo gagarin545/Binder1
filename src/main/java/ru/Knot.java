@@ -16,7 +16,6 @@ public class Knot implements Component {
     public void add(Component Component) { knots.add(Component);    }
     public Component getChild(int i) {  return (Component)knots.get(i); }
     public double getConsumed() {        return consumed;    }
-    public void setConsumed(double consumed) {        this.consumed = consumed;    }
     public double getDistributed() {        return distributed;    }
     public void setDistributed(double distributed) {        this.distributed = distributed;    }
     public String getName() {        return name;    }
@@ -30,14 +29,12 @@ public class Knot implements Component {
                         knots.stream().mapToDouble(a->  ((Component) a).getConsumed()).filter(a-> a > 0 ).reduce(Double::sum).getAsDouble())
                         * delta))
                 .forEach(x-> System.out.println("Узел " +((Component) x).getName() + " распределенная нагрузка " + ((Component) x).getDistributed()));
-
+        print();
     }
-    public void print() {
+    private void print() {
         Iterator iterator = knots.iterator();
-        while(iterator.hasNext()) {
-            Component knot = (Component) iterator.next();
-            knot.difference();
-            knot.print();
-        }
+        while(iterator.hasNext())
+            ((Component) iterator.next()).difference();
+
     }
 }

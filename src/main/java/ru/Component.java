@@ -12,5 +12,5 @@ public interface Component {
     public void setName(String name) ;
 
     public void difference();
-    public void print() ;
+ //   public void print() ;
 }

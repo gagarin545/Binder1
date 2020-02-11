@@ -14,6 +14,6 @@ public class KnotTest {
         p1.getChild(1).add( new KnotItem(150,  "1.2.1"));
         p1.getChild(1).add( new KnotItem(50,  "1.2.2"));
         p1.getChild(3).add( new KnotItem(33, "1.4.2"));
-        p1.print();
+        p1.difference();
     }
 }
