@@ -9,7 +9,7 @@ public class Knot implements Component {
     private String name;
     private ArrayList knots = new ArrayList();
 
-    Knot(double consumed, String name) {
+    public Knot(double consumed, String name) {
         this.consumed = consumed;
         this.name = name;
     }

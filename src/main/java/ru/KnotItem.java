@@ -5,7 +5,7 @@ public class KnotItem implements Component {
     private double distributed;
     private String name;
 
-    KnotItem(double consumed,  String name) {
+    public KnotItem(double consumed, String name) {
         this.consumed = consumed;
         this.name = name;
     }
